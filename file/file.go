@@ -8,5 +8,6 @@ func main() {
 	if err != nil {
 
 	}
+
 	ioutil.WriteFile("e:/best.jpg", file, 0666)
 }

@@ -1,12 +1,14 @@
 package main
 
 import (
-	_ "CODE/syncc"
-	"time"
+	"fmt"
+	"os"
 )
 
 func main() {
-
-	println("start---")
-	time.Sleep(10 * time.Second)
+	open, err := os.OpenFile("e:/now.txt", os.O_RDONLY|os.O_APPEND, 0666)
+	if err != nil {
+		fmt.Println("error")
+	}
+	open.Write([]byte("hehe\n"))
 }

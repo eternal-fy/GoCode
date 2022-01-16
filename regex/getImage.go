@@ -147,3 +147,10 @@ func GetPageStr(url string) (pageStr string) {
 	pageStr = string(pageBytes)
 	return pageStr
 }
+
+// 处理异常
+func HandleError(err error, why string) {
+	if err != nil {
+		fmt.Println(why, err)
+	}
+}
