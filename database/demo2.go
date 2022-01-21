@@ -1,4 +1,4 @@
-package main
+package database
 
 import (
 	_ "github.com/go-sql-driver/mysql"
@@ -24,7 +24,7 @@ func main() {
 	createTable(db)
 
 	//p := &Person{Name: "ld"} //如果age字段是int，则会写入age为0，为了避免填值，设置为*int32
-	pack := make([]Person, 10)
+	//pack := make([]Person, 10)
 	//db.Create(p)             //添加
 	//db.Table("myperson").Update(p).Where("name")
 	//查询第一个
