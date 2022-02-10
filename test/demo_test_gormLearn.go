@@ -93,6 +93,15 @@ func TestGroup(t *testing.T) {
 	fmt.Println(count)
 }
 
+func TestPluck(t *testing.T) {
+	db := GetConn()
+	defer db.Close()
+	var name []string
+
+	db.Table("student").Pluck("name", &name)
+	fmt.Println(name)
+}
+
 func GetConn() *gorm.DB {
 	db, err := gorm.Open("mysql", "ld:199935@(127.0.0.1:3306)/mydatabase?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
