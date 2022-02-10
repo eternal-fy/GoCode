@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	res, err := http.Get("https://www.baidu.com")
+	res, err := http.Get("http://www.baidu.com")
 	checkError(err)
 	data, err := ioutil.ReadAll(res.Body)
 	checkError(err)

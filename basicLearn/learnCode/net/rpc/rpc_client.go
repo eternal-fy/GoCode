@@ -1,8 +1,8 @@
 package main
 
 import (
+	"Gone/basicLearn/learnCode/net/rpc/rpc_object"
 	"fmt"
-	"learnCode/net/rpc/rpc_object"
 	"log"
 	"net/rpc"
 )
