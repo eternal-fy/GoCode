@@ -73,10 +73,10 @@ const (
 
 func main() {
 	address := []string{"norton_s@qq.com", "lewissunp@outlook.com"}
-	subject := "test mail"
+	subject := "tests mail"
 	body :=
 		`<br>hello!</br>
-    <br>this is a test email, pls ignore it.</br>`
+    <br>this is a tests email, pls ignore it.</br>`
 	SendMail(address, subject, body)
 
 }

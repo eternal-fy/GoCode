@@ -9,7 +9,7 @@ import (
 
 func main() {
 	hasher := sha1.New()
-	io.WriteString(hasher, "test")
+	io.WriteString(hasher, "tests")
 	b := []byte{}
 	fmt.Printf("Result: %x\n", hasher.Sum(b))
 	fmt.Printf("Result: %d\n", hasher.Sum(b))
