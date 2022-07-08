@@ -22,4 +22,20 @@ func b() {
 
 func main() {
 	b()
+	/*
+		e b
+		in b
+		e a
+		in a
+		l a
+		l b
+	*/
+	i := 0
+	for ; i < 10; i++ {
+		defer func() {
+			println(i)
+		}()
+	}
+	i++
+	// 11 11 11 .....
 }

@@ -3,6 +3,7 @@ package main
 import (
 	//"strings"
 	"strconv"
+	"strings"
 )
 
 func main() {
@@ -27,18 +28,16 @@ func main() {
 		}
 	*/
 
-	/*
-		//以具体内容分开
-		str:="abc|bcd|def"
-		strAns:=strings.Split(str,"|")
-		for index,ans:=range(strAns){
-			println(index,ans)
-		}
+	//以具体内容分开
+	str := "abc|bcd|def"
+	strAns := strings.Split(str, "|")
+	for index, ans := range strAns {
+		println(index, ans)
+	}
 
-		//将分开的数据拼接
-		strAns1:=strings.Join(strAns,"-")
-		println(strAns1)
-	*/
+	//将分开的数据拼接
+	strAns1 := strings.Join(strAns, "-")
+	println(strAns1)
 
 	//整数转化成字符串
 	num1 := 10
@@ -51,4 +50,7 @@ func main() {
 	num2, _ := strconv.ParseFloat(str3, 32)
 	println(num2)
 
+	strSpace := "  1234  "
+	space := strings.TrimSpace(strSpace)
+	println(space)
 }

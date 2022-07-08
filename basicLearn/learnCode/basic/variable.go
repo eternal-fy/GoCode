@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"runtime"
 )
@@ -18,7 +19,14 @@ func main() {
 	path := os.Getenv("PATH")
 	println("PATH:")
 	println(path)
-
+	a, b := 3, 4 //并行赋值
+	println(a, b)
+	a, b = b, a
+	println(a, b)
+	a++ //只能这样单独使用
+	println(a, b)
+	c := 1234.456789101
+	fmt.Printf("%.3e", c) //1.234e+03
 	/*变量声明方法-------------------------------
 	  var (
 	  	a = 15
